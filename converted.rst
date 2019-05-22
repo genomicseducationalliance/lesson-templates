@@ -1,4 +1,4 @@
 
 
-{{ lesson_title }}
+Sample lesson title
 =====================

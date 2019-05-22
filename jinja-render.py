@@ -6,6 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 
 def main():
     
+    '''
     def excelcsvtopipe(csv_file):
         """Converts an Excel comma-delimited csv file to pipe-delimited"""
         with open(csv_file, "rt", encoding="utf8") as file:
@@ -13,7 +14,7 @@ def main():
             for rows in reader:
                 writer=csv.writer(open('temp.csv','w'),delimiter='|')
                 writer.writerow(rows)
-                  
+      '''           
     
     
     def gettemplate(template_dir, template_name):
@@ -25,18 +26,19 @@ def main():
     
     #open the csv file and print template
     
-    def renderfromcsv(tempfile,outfile,gettemplate):
+    def renderfromcsv(csv_file,outfile,gettemplate):
         """ Imports a CSV file as a dictionary - headers are keys; print into the jinja template"""
-        reader = csv.reader(open(tempfile, "rt"),delimiter="|")
-        reader2=csv.DictReader(reader)
-        for values in reader: 
-            gen_template = gettemplate(template_dir, template_name)
-            output = gen_template.render(values)
-        with open(outfile, 'w') as outfile:
-            print(output, file=outfile)   
+        with open(csv_file, "rt", encoding="utf-8-sig") as file:
+            reader=csv.DictReader(file)
+            for values in reader:
+                print(values)
+                gen_template = gettemplate(template_dir, template_name)
+                output = gen_template.render(values)
+            with open(outfile, 'w') as outfile:
+                print(output, file=outfile)   
     
-    excelcsvtopipe(csv_file)
-    renderfromcsv(tempfile,outfile,gettemplate)
+    #excelcsvtopipe(csv_file)
+    renderfromcsv(csv_file,outfile,gettemplate)
 
 if __name__ == '__main__':
     parser=argparse.ArgumentParser(description="Move data from a CSV file into a ReStructured Text Jinja2 Template")
@@ -49,6 +51,6 @@ if __name__ == '__main__':
     template_name=args.template_name[0]
     csv_file=args.csv_file[0]
     outfile=args.outfile[0]
-    tempfile='temp.csv'
+    #tempfile='temp.csv'
     main()
 
