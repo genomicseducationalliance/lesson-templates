@@ -13,14 +13,14 @@ def main():
         return env.get_template(template_name)
     
     
-    #open the csv file and print template
+    #open the txt file (tab separated entries) and print template
     
     def renderfromcsv(tab_delimited_file,outfile,gettemplate):
         """ Imports a CSV file as a dictionary - headers are keys; print into the jinja template"""
         # indicate a new dialect with \t as the delimiter
         csv.register_dialect("tab-delimited", delimiter="\t")
         # use the utf-8-sug to get rid of pesky byte encoding characters 
-        with open(tab_delimited_file, "rt", encoding="utf-8-sig") as file:
+        with open(tab_delimited_file, "rt", encoding="latin-1") as file:
             # read data into a dictionary
             reader=csv.DictReader(file,dialect="tab-delimited")
             for values in reader:
@@ -44,5 +44,6 @@ if __name__ == '__main__':
     template_name=args.template_name[0]
     tab_delimited_file=args.tab_delimited_file[0]
     outfile=args.outfile[0]
+    print(template_dir,template_name,tab_delimited_file,outfile)
     main()
 
