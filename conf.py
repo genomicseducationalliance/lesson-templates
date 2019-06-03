@@ -21,6 +21,7 @@ author = 'your_name'
 version = '1.0'
 release = '1.0'
 
+html_logo = './img/GEA_logo.png'
 epub_title = project
 epub_author = author
 epub_publisher = author
