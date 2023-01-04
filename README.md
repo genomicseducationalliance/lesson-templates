@@ -1,5 +1,7 @@
 # GEA Lesson Template
 
+This is a template for a Sphinx/readthedocs-style (https://readthedocs.com/)lesson template for the Genomics Educaton Alliance https://qubeshub.org/community/groups/gea.
+
 You should import this repo to build a GEA lesson
 
 ## How GEA Lessons are built
@@ -104,3 +106,7 @@ If you want to go beyond just creating a markdown file, you will need to install
 |Top-level menus in Discovery Environment Apps in double quotes|<ul><li>Under "Input" select...</ul>|
 |Subheadings/steps in Discovery Environment Apps in single quotes|<ul><li>For 'sensitivity' enter...</ul>|
 |Buttons and keywords in bold|<ul><li>Click on **Apps**<li>Select **Arabidopsis**<li>Set 'sensitivity' to **Medium**</ul>|
+
+
+
+This material is based upon work supported by the National Science Foundation under Grant No. #1827130. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
