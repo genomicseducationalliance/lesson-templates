@@ -2,6 +2,8 @@
 
 This is a template for a Sphinx/readthedocs-style (https://readthedocs.com/)lesson template for the Genomics Education Alliance https://qubeshub.org/community/groups/gea.
 
+[![DOI](https://zenodo.org/badge/188117886.svg)](https://zenodo.org/badge/latestdoi/188117886)
+
 You should import this repo to build a GEA lesson
 
 ## How GEA Lessons are built
