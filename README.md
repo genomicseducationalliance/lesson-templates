@@ -1,6 +1,6 @@
 # GEA Lesson Template
 
-This is a template for a Sphinx/readthedocs-style (https://readthedocs.com/)lesson template for the Genomics Educaton Alliance https://qubeshub.org/community/groups/gea.
+This is a template for a Sphinx/readthedocs-style (https://readthedocs.com/)lesson template for the Genomics Education Alliance https://qubeshub.org/community/groups/gea.
 
 You should import this repo to build a GEA lesson
 
